@@ -19,6 +19,7 @@ local_src_files:= \
 	s3_enc.c \
 	s3_pkt.c \
 	s3_both.c \
+	s3_cbc.c \
 	s23_meth.c \
 	s23_srvr.c \
 	s23_clnt.c \
@@ -42,7 +43,9 @@ local_src_files:= \
 	ssl_algs.c \
 	bio_ssl.c \
 	ssl_err.c \
-	kssl.c
+	kssl.c \
+	d1_srtp.c \
+	tls_srp.c
 
 include $(CLEAR_VARS)
 include $(LOCAL_PATH)/../android-config.mk
