@@ -162,7 +162,20 @@ local_src_files := \
 	cmac/cmac.c \
 	cmac/cm_ameth.c \
 	cmac/cm_pmeth.c \
-	comp/c_rle.c \
+    cms/cms_asn1.c \
+    cms/cms_att.c \
+    cms/cms_cd.c \
+    cms/cms_dd.c \
+    cms/cms_enc.c \
+    cms/cms_env.c \
+    cms/cms_err.c \
+    cms/cms_ess.c \
+    cms/cms_io.c \
+    cms/cms_lib.c \
+    cms/cms_pwri.c \
+    cms/cms_sd.c \
+    cms/cms_smime.c \
+  	comp/c_rle.c \
 	comp/c_zlib.c \
 	comp/comp_err.c \
 	comp/comp_lib.c \
@@ -256,6 +269,28 @@ local_src_files := \
 	ecdsa/ecs_ossl.c \
 	ecdsa/ecs_sign.c \
 	ecdsa/ecs_vrf.c \
+    engine/eng_all.c \
+    engine/eng_cnf.c \
+    engine/eng_ctrl.c \
+    engine/eng_dyn.c \
+    engine/eng_err.c \
+    engine/eng_fat.c \
+    engine/eng_init.c \
+    engine/eng_lib.c \
+    engine/eng_list.c \
+    engine/eng_pkey.c \
+    engine/eng_table.c \
+    engine/tb_asnmth.c \
+    engine/tb_cipher.c \
+    engine/tb_dh.c \
+    engine/tb_digest.c \
+    engine/tb_dsa.c \
+    engine/tb_ecdh.c \
+    engine/tb_ecdsa.c \
+    engine/tb_pkmeth.c \
+    engine/tb_rand.c \
+    engine/tb_rsa.c \
+    engine/tb_store.c \
 	err/err.c \
 	err/err_all.c \
 	err/err_prn.c \

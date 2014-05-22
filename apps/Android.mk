@@ -52,7 +52,8 @@ LOCAL_SRC_FILES:= \
 	verify.c \
 	version.c \
 	x509.c \
-	srp.c
+	srp.c \
+	cms.c
 
 #   cms.c ec.c s_server.c
 
