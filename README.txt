@@ -2,7 +2,7 @@ This is a version of the official Android openssl sources, but it is meant to be
 
 To build:
 cd openssl-android
-/path/to/android-ndk-r5b/ndk-build
+/path/to/android-ndk/ndk-build
 
 
 http://guardianproject.info
@@ -12,11 +12,10 @@ Updating the upstream code
 ----------------------
 
 This repository tracks the Android openssl repository:
- git://android.git.kernel.org/platform/external/openssl.git
  https://android.googlesource.com/platform/external/openssl
 
 To use this, add it as a remote called 'upstream'
- git remote add upstream git://android.git.kernel.org/platform/external/openssl.git
+ git remote add upstream https://android.googlesource.com/platform/external/openssl
 
 Then here's how you get the updated code:
  git checkout upstream (switch to upstream tracking branch)
