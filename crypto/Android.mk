@@ -22,6 +22,7 @@ local_src_files := \
 	o_time.c \
 	o_str.c \
 	o_dir.c \
+	o_init.c \
 	aes/aes_cbc.c \
 	aes/aes_cfb.c \
 	aes/aes_ctr.c \
@@ -156,7 +157,11 @@ local_src_files := \
 	bn/bn_sqrt.c \
 	bn/bn_word.c \
 	buffer/buf_err.c \
+	buffer/buf_str.c \
 	buffer/buffer.c \
+	cmac/cmac.c \
+	cmac/cm_ameth.c \
+	cmac/cm_pmeth.c \
 	comp/c_rle.c \
 	comp/c_zlib.c \
 	comp/comp_err.c \
@@ -221,10 +226,9 @@ local_src_files := \
 	dso/dso_lib.c \
 	dso/dso_null.c \
 	dso/dso_openssl.c \
-	dso/dso_vms.c \
-	dso/dso_win32.c \
 	ec/ec2_mult.c \
 	ec/ec2_smpl.c \
+	ec/ec2_oct.c \
 	ec/ec_ameth.c \
 	ec/ec_asn1.c \
 	ec/ec_check.c \
@@ -236,10 +240,12 @@ local_src_files := \
 	ec/ec_mult.c \
 	ec/ec_pmeth.c \
 	ec/ec_print.c \
+	ec/ec_oct.c \
 	ec/eck_prn.c \
 	ec/ecp_mont.c \
 	ec/ecp_nist.c \
 	ec/ecp_smpl.c \
+	ec/ecp_oct.c \
 	ecdh/ech_err.c \
 	ecdh/ech_key.c \
 	ecdh/ech_lib.c \
@@ -262,6 +268,7 @@ local_src_files := \
 	evp/c_alld.c \
 	evp/digest.c \
 	evp/e_aes.c \
+	evp/e_aes_cbc_hmac_sha1.c \
 	evp/e_bf.c \
 	evp/e_des.c \
 	evp/e_des3.c \
@@ -269,6 +276,7 @@ local_src_files := \
 	evp/e_old.c \
 	evp/e_rc2.c \
 	evp/e_rc4.c \
+	evp/e_rc4_hmac_md5.c \
 	evp/e_rc5.c \
 	evp/e_xcbc_d.c \
 	evp/encode.c \
@@ -279,6 +287,7 @@ local_src_files := \
 	evp/evp_lib.c \
 	evp/evp_pbe.c \
 	evp/evp_pkey.c \
+	evp/evp_cnf.c \
 	evp/m_dss.c \
 	evp/m_dss1.c \
 	evp/m_ecdsa.c \
@@ -314,9 +323,12 @@ local_src_files := \
 	md5/md5_dgst.c \
 	md5/md5_one.c \
 	modes/cbc128.c \
+	modes/ccm128.c \
 	modes/cfb128.c \
 	modes/ctr128.c \
+	modes/gcm128.c \
 	modes/ofb128.c \
+	modes/xts128.c \
 	objects/o_names.c \
 	objects/obj_dat.c \
 	objects/obj_err.c \
@@ -378,11 +390,13 @@ local_src_files := \
 	rc2/rc2ofb64.c \
 	rc4/rc4_enc.c \
 	rc4/rc4_skey.c \
+	rc4/rc4_utl.c \
 	ripemd/rmd_dgst.c \
 	ripemd/rmd_one.c \
 	rsa/rsa_ameth.c \
 	rsa/rsa_asn1.c \
 	rsa/rsa_chk.c \
+	rsa/rsa_crpt.c \
 	rsa/rsa_eay.c \
 	rsa/rsa_err.c \
 	rsa/rsa_gen.c \
@@ -403,6 +417,8 @@ local_src_files := \
 	sha/sha256.c \
 	sha/sha512.c \
 	sha/sha_dgst.c \
+	srp/srp_lib.c \
+	srp/srp_vfy.c \
 	stack/stack.c \
 	ts/ts_err.c \
 	txt_db/txt_db.c \
@@ -474,6 +490,7 @@ local_c_includes := \
 	$(NDK_PROJECT_PATH) \
 	$(NDK_PROJECT_PATH)/crypto/asn1 \
 	$(NDK_PROJECT_PATH)/crypto/evp \
+	$(NDK_PROJECT_PATH)/crypto/modes \
 	$(NDK_PROJECT_PATH)/include \
 	$(NDK_PROJECT_PATH)/include/openssl
 
