@@ -426,8 +426,6 @@ local_src_files := \
 	rc4/rc4_enc.c \
 	rc4/rc4_skey.c \
 	rc4/rc4_utl.c \
-	ripemd/rmd_dgst.c \
-	ripemd/rmd_one.c \
 	rsa/rsa_ameth.c \
 	rsa/rsa_asn1.c \
 	rsa/rsa_chk.c \
